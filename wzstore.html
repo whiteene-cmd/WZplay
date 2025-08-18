@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WZstoreMAIN</title>
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Demo styles -->
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #ffffff;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #121212;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="mainVisual">
+        <!-- Swiper -->
+        <div class="swiper mainSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="bg1">
+                        <figure class="item"></figure>
+                        <div class="textBox">
+                            <span>아비오트가 선사하는 즐거움!</span>
+                            <h2>Aviot x WZplay</h2>
+                            <button class="detail">자세히 보기</button>
+                            <button class="buy">구매하기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg2">
+                        <figure class="item"></figure>
+                        <div class="textBox">
+                            <span>나도 이제 결속 밴드에 합류? 내 포지션 확보!</span>
+                            <h2>WZplay x 봇치더락</h2>
+                            <button class="detail">자세히 보기</button>
+                            <button class="buy">구매하기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg3">
+                        <figure class="item"></figure>
+                        <div class="textBox">
+                            <span>추억 속 햄토리와 다시 만났다.</span>
+                            <h2>WZplay x 방가방가 햄토리</h2>
+                            <button class="detail">자세히 보기</button>
+                            <button class="buy">구매하기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg4">
+                        <figure class="item"></figure>
+                        <div class="textBox">
+                            <span>모두의 귀염둥이 더피를 우리 집에 입양하기?</span>
+                            <h2>WZplay x 케이팝 데몬 헌터스</h2>
+                            <button class="detail">자세히 보기</button>
+                            <button class="buy">구매하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section id="bestSeller">
+        <span>가장 많이 팔린 위즈의 인기 상품들을 만나보세요.</span>
+        <!-- 아코디언 메뉴가 들어가야함. 아코디언 할 줄 모르니 내용물만 적기-->
+        <div class="innerBox">
+            <h2>K.D.H</h2>
+            <p>작지만 강력한 퍼포먼스! <br>
+                프리렌 성우의 선명한 음질이 담긴 이 제품은 <br>
+                안정적인 블루투스 연결로 <br>
+                당신의 하루를 더 특별하게 만들어 줍니다.</p>
+            <figure class="item"></figure>
+        </div>
+        <div class="innerBox">
+            <h2>크레용 신짱</h2>
+            <p>작지만 확실한 존재감, 초코비 열쇠고리! <br>
+                어디에 달아도 세련된 포인트가 되는 감각적인 디자인. <br>
+                당신의 일상 소품에 특별한 개성을 더해보세요.</p>
+            <figure class="item"></figure>
+        </div>
+        <div class="innerBox">
+            <h2>사카모토데이즈</h2>
+            <p>따뜻한 순간을 함께할 작은 친구, 신짱! <br>
+                손 안에 꼭 들어오는 포근함으로 하루의 피곤함을 풀어보세요. <br>
+                선물하기에도, 내 곁에 두기에도 완벽한 힐링 아이템입니다.</p>
+            <figure class="item"></figure>
+        </div>
+        <div class="innerBox">
+            <h2>진격의 거인</h2>
+            <p>심장을 울리는 병사가 된다. 조사병단에 합류! <br>
+                가볍고 편안한 착용감, 언제 어디서든 잘 어울리는 디자인.
+                당신의 개성을 드러내는 새로운 패션 아이템입니다.</p>
+            <figure class="item"></figure>
+        </div>
+    </section>
+
+    <section id="product">
+        <span>위즈 플레이의 모든 상품을 한눈에 보실 수 있도록 모았습니다.</span>
+        <div class="innerBox">
+            <div class="proWrap">
+                <div class="tabArea">
+                    <ul class="tabMenu">
+                        <li class="on"><a href="#">Bag</a></li>
+                        <li><a href="#">T-shirts</a></li>
+                        <li><a href="#">Rag-Doll</a></li>
+                        <li><a href="#">Acc</a></li>
+                        <li><a href="#">Other</a></li>
+                    </ul>
+                    <a href="javascript:;" class="btn btnView"><span>더 보기</span></a>
+                </div>
+                <div class="tabOpen">
+                    <ul class="productList on">
+                        <li>
+                            <figure>
+                                <a href="#">
+                                    <img src="img/store/" alt="메신저백">
+                                </a>
+                            </figure>
+                            <div class="itemTxt">
+                                <div class="title">
+                                    <em>위즈 메신저백</em>
+                                </div>
+                                <div class="bedge">
+                                    <span>실용적</span>
+                                    <span>위즈시그니처</span>
+                                </div>
+                                <div class="ratings">
+                                    <img src="img/ico/ico_star.svg" alt="">
+                                    <span>4.9</span>
+                                    <span>(+999)</span>
+                                </div>
+                                <div class="priceWrap">
+                                    <strong>69,000원</strong>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <figure>
+                                <a href="#">
+                                    <img src="img/store/" alt="미니 크로스백">
+                                </a>
+                            </figure>
+                            <div class="itemTxt">
+                                <div class="title">
+                                    <em>위즈 미니크로스백</em>
+                                </div>
+                                <div class="bedge">
+                                    <span>작고소중한</span>
+                                    <span>여행잇템</span>
+                                </div>
+                                <div class="ratings">
+                                    <img src="img/ico/ico_star.svg" alt="">
+                                    <span>4.9</span>
+                                    <span>(2711)</span>
+                                </div>
+                                <div class="priceWrap">
+                                    <strong>35,000원</strong>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <figure>
+                                <a href="#">
+                                    <img src="img/store/" alt="백팩">
+                                </a>
+                            </figure>
+                            <div class="itemTxt">
+                                <div class="title">
+                                    <em>위즈시그니처 백팩</em>
+                                </div>
+                                <div class="bedge">
+                                    <span>데일리</span>
+                                    <span>위즈시그니처</span>
+                                </div>
+                                <div class="ratings">
+                                    <img src="img/ico/ico_star.svg" alt="">
+                                    <span>4.9</span>
+                                    <span>(10296)</span>
+                                </div>
+                                <div class="priceWrap">
+                                    <strong>55,000원</strong>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <figure>
+                                <a href="#">
+                                    <img src="img/store/" alt="에코백">
+                                </a>
+                            </figure>
+                            <div class="itemTxt">
+                                <div class="title">
+                                    <em>위즈 에코백</em>
+                                </div>
+                                <div class="bedge">
+                                    <span>데일리</span>
+                                    <span>위즈 시그니처</span>
+                                </div>
+                                <div class="ratings">
+                                    <img src="img/ico/ico_star.svg" alt="">
+                                    <span>4.9</span>
+                                    <span>(25087)</span>
+                                </div>
+                                <div class="priceWrap">
+                                    <strong>24,000원</strong>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="proItemList">
+                        <li>
+                            <figure>
+                                <a href="#">
+                                    <img src="img/store/" alt="슬램덩크">
+                                </a>
+                            </figure>
+                            <div class="itemTxt">
+                                <div class="title">
+                                    <em>위즈x슬램덩크 20주년 한정판 티셔츠</em>
+                                </div>
+                                <div class="bedge">
+                                    <span>더쿠패션</span>
+                                    <span>남녀공용</span>
+                                </div>
+                                <div class="ratings">
+                                    <img src="img/ico/ico_star.svg" alt="">
+                                    <span>4.9</span>
+                                    <span>(25087)</span>
+                                </div>
+                                <div class="priceWrap">
+                                    <strong>69,000원</strong>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="review">
+        <span>위즈스토어를 방문해주신 모든 고객님의 마음의 소리를 담았습니다.</span>
+        <div class="innerBox">
+            <div class="rev1">
+                <p class="title">09028님의 리뷰</p>
+                <p class="info">
+                    재질도 엄청 고급스럽고 폭신매끈한게 제가 딱 생각했던 인형이에요. 중심부에 철심이 들어있어서 튼튼하게 고정시켜주니까 인형이 잘 서있는 점도 좋았습니다. 두세개 더 사서 가족처럼 만들어 둘까 생각중이에요.
+                </p>
+                <button class="detail">제품 보기</button>
+            </div>
+            <div class="rev1">
+                <p class="title">85563ads님의 리뷰</p>
+                <p class="info">
+                    작지만 퀄리티가 정말 좋아요. 가방에 달았는데 포인트가 확 살고, 흔들릴 때마다 은근 귀엽네요. 튼튼해서 오래 쓸 수 있을 것 같고, 여러 개 사서 친구들한테도 선물하고 싶어요.
+                </p>
+                <button class="detail">제품 보기</button>
+            </div>
+            <div class="rev1">
+                <p class="title">4432ddl님의 리뷰</p>
+                <p class="info">
+                    재질이 가볍고 시원해서 여름에 입기 딱 좋습니다. 세탁해도 프린트가 변형 없이 그대로라서 만족해요. 캐주얼하게도 입고, 아우터랑 매치해도 잘 어울려서 활용도가 높네요.
+                </p>
+                <button class="detail">제품 보기</button>
+            </div>
+            <div class="rev1">
+                <p class="title">voswl020님의 리뷰</p>
+                <p class="info">
+                    소리 퀄리티가 기대 이상이에요! 고음은 맑고 저음은 묵직해서 듣는 맛이 있습니다. 귀에 착 감기는 착용감 덕분에 오래 들어도 불편하지 않아요. 배터리도 꽤 오래가서 출퇴근 시간 내내 써도 끄떡없네요. 디자인까지 세련돼서 패션 아이템처럼 들고 다니는 재미가 있습니다.
+                </p>
+                <button class="detail">제품 보기</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mainSwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        $('li').on('click',function(){
+            //방금 클릭한 li의 순서를 변수에 저장
+            let i = $(this).index();
+            console.log(i)
+            //실행전에 li에 on클래스를 모두 제거
+            $('li').removeClass('on');
+            /* $('li').eq(i).addClass('on'); */
+            $(this).addClass('on');
+            $('section > div').removeClass('on')
+            $('section > div').eq(i).addClass('on')
+        }) 
+    </script>
+</body>
+
+</html>
