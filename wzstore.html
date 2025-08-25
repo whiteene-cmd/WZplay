@@ -1,3 +1,8 @@
+<!-- 
+ 서브 헤더 나왔을때 해당 위치로 가기
+ 클릭하면 해당 페이지로 가기
+ 스크롤 애니메이션 넣을건지 결정하기
+ -->
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -6,18 +11,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WZstoreMAIN</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/bestSeller.css">
+    <link rel="stylesheet" href="css/wzstore.css">
 
     <!-- 헤더 링크 -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/layout.css">
     <script src="js/layout.js" defer></script>
-    <script src="js/bestSeller.js"></script>
+
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Demo styles -->
 
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(white, #ffe6e6);
+        }
+    </style>
 </head>
+
 
 <body>
     <div style="position: relative;"><!-- height: 200vh; background-color: aqua; -->
@@ -67,8 +80,8 @@
     </div>
     <div class="subHeader">
         <h3><span>WZ</span>play</h3>
-        <img src="img/ico/close (1).png" alt="메뉴닫기">
-        <div>
+        <div class="headerClose"><a href="#"><img src="img/ico/close (1).png" alt="메뉴닫기"></a></div>
+        <div class="subHeaderOpen">
             <ul>
                 <li><a href="#"><span>Product</span></a>
                     <ul>
@@ -147,22 +160,20 @@
                                 <button class="detail">자세히 보기</button>
                                 <button class="buy">구매하기</button>
                             </div>
-                            <img src="img/store/인형/케데헌_벡터.png" alt="솜인형" class="mainItem">
+                            <img src="img/store/인형/케데헌_더피만.png" alt="솜인형" class="mainItem">
                         </div>
                     </div>
                 </div>
                 <div class="swiper-scrollbar">
-                    <div class="custom-scrollbar" ></div>
+                    <div class="custom-scrollbar"></div>
                 </div>
             </div>
         </section>
         <section id="bestSeller">
             <h2>Best Seller</h2>
             <span>가장 많이 팔린 위즈의 인기 상품들을 만나보세요.</span>
-            <!-- 아코디언 메뉴가 들어가야함. 아코디언 할 줄 모르니 내용물만 적기-->
-            <div class="innerBox">
-                <div class="bestItemBox best1">
-                    <figure class="bestItem"></figure>
+            <div class="innerBox" role="tablist" aria-label="Best Seller Accordion">
+                <div class="bestItemBox best1" role="tab" tabindex="0" aria-selected="true">
                     <div class="info">
                         <h3>AVIOT:FRIREN</h3>
                         <p>작지만 강력한 퍼포먼스! <br>
@@ -170,8 +181,9 @@
                             안정적인 블루투스 연결로 <br>
                             당신의 하루를 더 특별하게 만들어 줍니다.</p>
                     </div>
+                    <figure class="bestItem"></figure>
                 </div>
-                <div class="bestItemBox best2">
+                <div class="bestItemBox best2" role="tab" tabindex="0" aria-selected="false">
                     <div class="info">
                         <h3>크레용 신짱</h3>
                         <p>작지만 확실한 존재감, 초코비 열쇠고리! <br>
@@ -180,7 +192,7 @@
                     </div>
                     <figure class="bestItem"></figure>
                 </div>
-                <div class="bestItemBox best3">
+                <div class="bestItemBox best3" role="tab" tabindex="0" aria-selected="false">
                     <div class="info">
                         <h3>사카모토데이즈</h3>
                         <p>따뜻한 순간을 함께할 작은 친구, 신짱! <br>
@@ -189,7 +201,7 @@
                     </div>
                     <figure class="bestItem"></figure>
                 </div>
-                <div class="bestItemBox best4">
+                <div class="bestItemBox best4" role="tab" tabindex="0" aria-selected="false">
                     <div class="info">
                         <h3>K.D.H</h3>
                         <p>나도 악귀를 무찌르는 헌터?<br>
@@ -207,11 +219,11 @@
                 <div class="proWrap">
                     <div class="tabArea">
                         <ul class="tabMenu">
-                            <li class="on"><a href="#">Bag</a></li>
-                            <li><a href="#">T-shirts</a></li>
-                            <li><a href="#">Rag-Doll</a></li>
-                            <li><a href="#">Acc</a></li>
-                            <li><a href="#">Other</a></li>
+                            <li class="on"><a href="#" return false;>Bag</a></li>
+                            <li><a href="#" return false;>T-shirts</a></li>
+                            <li><a href="#" return false;>Rag-Doll</a></li>
+                            <li><a href="#" return false;>Acc</a></li>
+                            <li><a href="#" return false;>Other</a></li>
                         </ul>
                     </div>
                     <div class="tabOpen">
@@ -717,13 +729,112 @@
             </div>
         </section>
     </div>
-
+    <footer id="mainFooter" class="main-footer-wrapper">
+        <div class="main-footer-container">
+            <ul class="social-nav">
+                <li><a href="#" class="ico_X"><span class="hidden">X</span></a></li>
+                <li><a href="#" class="ico_facebook"><span class="hidden">페이스북</span></a></li>
+                <li><a href="#" class="ico_insta"><span class="hidden">인스타그램</span></a></li>
+                <li><a href="#" class="ico_youtube"><span class="hidden">유튜브</span></a></li>
+            </ul>
+            <ul class="footer-nav">
+                <li>회사 정보</li>
+                <li>법적 고지</li>
+                <li>이용 약관</li>
+                <li>쿠키 설정</li>
+            </ul>
+            <ul class="footer-nav">
+                <li>개인정보</li>
+                <li>고객 센터</li>
+                <li>문의하기</li>
+                <li>청소년보호정책</li>
+            </ul>
+            <ul class="footer-nav">
+                <li>공지사항</li>
+                <li>환불정책</li>
+            </ul>
+            <div class="company-info">
+                <p>상호명 : 주식회사 위즈플레이 (WZPlay Inc.)</p>
+                <p>사업자등록번호 : 123-45-67890</p>
+                <p>통신판매업신고번호 : 제2025-서울마포-0001호</p>
+                <p>주소 : 서울특별시 마포구 와우산로 123, 5층 (04000)</p>
+                <p>이메일 : contact@wzplay.com</p>
+            </div>
+        </div>
+    </footer>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
+
     <script>
+        /* 서브 헤더 창열기 */
+        $(function () {
+            $('.nav-list').on('click', function (e) {
+                e.preventDefault();
+                let subHeader = $('.subHeader');
+                $(subHeader).stop().animate({
+                    left: 0
+                }, 1500, 'easeOutExpo')
+            })
+
+            $('.headerClose').on('click', function () {
+                let subHeader = $('.subHeader');
+                $(subHeader).stop().animate({
+                    left: '-100%'
+                }, 1500, 'easeOutExpo')
+            })
+        })
+
+
+        /* 베스트셀러 아코디언 */
+        document.addEventListener('DOMContentLoaded', () => {
+            const boxes = [...document.querySelectorAll('.bestItemBox')];
+
+            const open = (el) => {
+                boxes.forEach(b => {
+                    const active = b === el;
+                    b.classList.toggle('is-open', active);
+                    b.setAttribute('aria-selected', active ? 'true' : 'false');
+                });
+            };
+
+            //첫 번째 카드 오픈쓰
+            open(boxes[0]);
+
+            // 눌러서 토글쓰
+            boxes.forEach(b => {
+                b.addEventListener('click', () => open(b));
+                b.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(b); }
+                    //화살표로 이동쓰
+                    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+                        e.preventDefault();
+                        const i = boxes.indexOf(b);
+                        const next = e.key === 'ArrowRight' ? (i + 1) % boxes.length : (i - 1 + boxes.length) % boxes.length;
+                        boxes[next].focus();
+                        open(boxes[next]);
+                    }
+                });
+            });
+        });
+
+        /* 프로덕트 메뉴 탭기능 */
+        $('.tabMenu li').on('click', function (e) {
+            e.preventDefault();
+            //방금 클릭한 li의 순서를 변수에 저장
+            let i = $(this).index();
+            console.log(i)
+            //실행전에 li에 on클래스를 모두 제거
+            $('li').removeClass('on');
+            $('li').eq(i).addClass('on');
+            $(this).addClass('on');
+            $('.tabOpen >.productList').removeClass('on')
+            $('.tabOpen >.productList').eq(i).addClass('on')
+        })
+
+        /* Initialize Swiper */
+
         var swiper = new Swiper(".mainSwiper", {
             scrollbar: {
                 el: ".swiper-scrollbar",
@@ -735,19 +846,6 @@
                 disableOnInteraction: false,
             }
         });
-
-
-        $('li').on('click', function () {
-            //방금 클릭한 li의 순서를 변수에 저장
-            let i = $(this).index();
-            console.log(i)
-            //실행전에 li에 on클래스를 모두 제거
-            $('li').removeClass('on');
-            /* $('li').eq(i).addClass('on'); */
-            $(this).addClass('on');
-            $('section > div').removeClass('on')
-            $('section > div').eq(i).addClass('on')
-        }) 
     </script>
 </body>
 
