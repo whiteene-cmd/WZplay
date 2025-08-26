@@ -72,3 +72,29 @@ $(function () {
     alert('쿠폰을 먼저 선택해주세요.');
   });
 });
+
+/* 카드를 선택하면 가상선택자가 나오도록 함 */
+$('.cardArea ul li a').on('click', function(e){
+  e.preventDefault();                 
+  $('.cardArea ul li a').removeClass('is-on');
+  $(this).addClass('is-on');
+});
+
+/* 결제카드 추가부분을 눌렀을때 */ /* -> 제이쿼리로 따로 처리함 */
+$(function () {
+  $(document).on('click', '.cardArea ul li a', function (e) {
+    e.preventDefault();
+
+    const $li = $(this).closest('li');
+
+
+    if ($li.find('p').length) {
+      alert('본인인증 후 다시 시도하세요');
+      return; 
+    }
+
+    // 일반 카드: 오버레이 표시 (단일 선택)
+    $('.cardArea ul li a').removeClass('is-on');
+    $(this).addClass('is-on');
+  });
+});
